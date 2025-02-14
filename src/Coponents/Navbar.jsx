@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [show, setshow] = useState(false);
+  let navigate=useNavigate()
   return (
     <div className='w-full bg-blue-950'>
   <header
@@ -58,7 +61,7 @@ const Navbar = () => {
             class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Sign
             up</Link>
 
-          <button id="toggleOpen" class='lg:hidden'>
+          <button id="toggleOpen" class='' onClick={()=>setshow(!show)}>
             <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -66,6 +69,16 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
+        { show && <div className='absolute top-[130%] bg-white rounded-lg right-0 w-[100px]'>
+            <ul className='flex flex-col text-center gap-2 bg-slate-600 text-white'>
+                <li onClick={()=>navigate('/login')} className='px-4 py-3'>Login</li>
+                <li onClick={()=>navigate('/signup')} className='px-4 py-3'>Signup</li>
+                <li onClick={()=>navigate('/cart')} className='px-4 py-3'>Cart</li>
+                <li onClick={()=>navigate('/')} className='px-4 py-3'>Home</li>
+                {/* <li onClick={()=>navigate('/profile')} className='px-4 py-3'>Cart</li> */}
+            </ul>
+        </div>}
+
       </div>
     </header>
     </div>

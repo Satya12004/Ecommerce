@@ -35,11 +35,11 @@ const Login = () => {
   return (
     <div>
       <div class="font-[sans-serif]">
-      <div className="grid lg:grid-cols-2 gap-4 max-lg:gap-12 bg-gradient-to-r from-blue-500 to-blue-700 sm:px-8 px-4 py-12 h-[320px]">
-</div>
+      {/* <div className="grid lg:grid-cols-2 gap-4 max-lg:gap-12 bg-gradient-to-r from-blue-500 to-blue-700 sm:px-8 fixed ">
+</div> */}
 
         <div>
-          <a href="javascript:void(0)"><img
+          <a href="#"><img
             src="https://readymadeui.com/readymadeui-white.svg" alt="logo" class='w-40' />
           </a>
           <div class="max-w-lg mt-16 max-lg:hidden">

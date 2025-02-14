@@ -55,7 +55,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <form class="md:col-span-2 w-full py-6 px-6 sm:px-16 max-md:max-w-xl mx-auto">
+        <form className="pt-0">
           <div class="mb-6">
             <h3 class="text-gray-800 text-xl font-bold">Create an account</h3>
           </div>
