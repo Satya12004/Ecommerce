@@ -26,7 +26,7 @@ export const CartSlice = createSlice({
     },
     handleIncrement:(state,action)=>{
       let obj = {...action.payload}
-      obj.price = obj.price - (obj.price/ obj.quantity)
+      obj.price = obj.price + (obj.price/ obj.quantity)
       obj.quantity = obj.quantity +1
       console.log(obj)
       let index = state.array.findIndex((ele)=>ele.id===action.payload.id)
