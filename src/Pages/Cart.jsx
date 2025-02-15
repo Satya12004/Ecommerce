@@ -79,7 +79,7 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div class="ml-auto">
-                                <h4 class="text-base font-bold text-gray-800">{ele.price}</h4>
+                                <h4 class="text-base font-bold text-gray-800">{ele.price.toFixed(2)}</h4>
                             </div>
                         </div>
 
